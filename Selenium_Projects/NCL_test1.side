@@ -1,0 +1,97 @@
+{
+  "id": "4d26c12b-3072-4996-b1a6-7772a8f0862c",
+  "version": "2.0",
+  "name": "NCL_test1",
+  "url": "http://ncl.com",
+  "tests": [{
+    "id": "3bb50120-7907-4af5-96a8-afe1e434f58b",
+    "name": "Test Scenario 1",
+    "commands": [{
+      "id": "20e69797-006c-4c9a-b21b-8ef85461be6c",
+      "comment": "",
+      "command": "open",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "08714fc4-a8e3-4dbb-9f7d-38abb9a117f0",
+      "comment": "",
+      "command": "clickAt",
+      "target": "linkText=Ports",
+      "targets": [
+        ["linkText=Ports", "linkText"],
+        ["css=#c2-collapse-The-Norwegian-Difference .listing_item:nth-child(5) > .simpleText", "css:finder"],
+        ["xpath=(//a[contains(text(),'Ports')])[2]", "xpath:link"],
+        ["xpath=//div[@id='c2-collapse-The-Norwegian-Difference']/ul/li[5]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/port-of-call')])[2]", "xpath:href"],
+        ["xpath=//div/div[2]/div/div/div/div/div/div[2]/div/ul/li[5]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4ebd4d47-6fa6-4cb7-b26e-1247e32c2510",
+      "comment": "",
+      "command": "clickAt",
+      "target": "id=searchbar",
+      "targets": [
+        ["id=searchbar", "id"],
+        ["css=#searchbar", "css:finder"],
+        ["xpath=//input[@id='searchbar']", "xpath:attributes"],
+        ["xpath=//div[@id='searchArea']/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//form/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1631d804-95a0-4419-9a5d-a8f9224481f2",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=searchbar",
+      "targets": [
+        ["id=searchbar", "id"],
+        ["css=#searchbar", "css:finder"],
+        ["xpath=//input[@id='searchbar']", "xpath:attributes"],
+        ["xpath=//div[@id='searchArea']/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//form/div/input", "xpath:position"]
+      ],
+      "value": "Honolulu"
+    }, {
+      "id": "c8852602-4117-4267-90ff-206dfbdbd249",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ng-pristine > .ng-binding",
+      "targets": [
+        ["css=.ng-pristine > .ng-binding", "css:finder"],
+        ["xpath=//div[@id='searchArea']/div[2]/ul/li[2]/a/span", "xpath:idRelative"],
+        ["xpath=//div[2]/ul/li[2]/a/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4a5954b1-ad74-4339-9c3b-727ace0989e6",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=div:nth-child(495) > img",
+      "targets": [
+        ["css=div:nth-child(495) > img", "css:finder"],
+        ["xpath=//div[@id='ports-map']/div/div/div/div[3]/div/div[3]/div[495]/img", "xpath:idRelative"],
+        ["xpath=//div[495]/img", "xpath:position"]
+      ],
+      "value": "30000"
+    }, {
+      "id": "84eb5192-dcb3-4fd4-92ad-37bffe4cf04b",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=div:nth-child(495) > img",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "82645748-1950-4c4d-95b5-8a676f47eed8",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["3bb50120-7907-4af5-96a8-afe1e434f58b"]
+  }],
+  "urls": ["http://ncl.com/"],
+  "plugins": []
+}
