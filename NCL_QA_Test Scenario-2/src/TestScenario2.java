@@ -35,8 +35,6 @@ public class TestScenario2 {
 		driver.findElement(By.xpath("//*[@id=\"search_destinations_chosen\"]/div/div/input")).sendKeys("Alaska Cruises");
 		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
 
-		//input Alaska Cruises in to search
-		String searchStr = "Alaska Cruises";
 		driver.findElement(By.xpath("//*[@id=\"search_destinations_chosen\"]/div/ul/li")).click();;
 
 	}
