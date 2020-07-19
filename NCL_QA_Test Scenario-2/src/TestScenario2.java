@@ -16,31 +16,31 @@ public class TestScenario2 {
 
 		//launch the firefox browser and open the application url
 		driver.get(appUrl);
-		
+
 		// maximize the browser window
-        driver.manage().window().maximize();
-        
-        WebElement exploremenu = driver.findElement(By.linkText("EXPLORE"));
-        String xpathExpression = "//a[@href='/excursions']";
+		driver.manage().window().maximize();
 
-        
-        HoverToElement(driver,exploremenu);
-        HoverToElement(driver,driver.findElement(By.xpath(xpathExpression)));
+		WebElement exploremenu = driver.findElement(By.linkText("EXPLORE"));
+		String xpathExpression = "//a[@href='/excursions']";
 
-        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
-        driver.findElement(By.xpath("//*[@id=\"search_destinations_chosen\"]")).click();
-        
-        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
-         
-        driver.findElement(By.xpath("//*[@id=\"search_destinations_chosen\"]/div/div/input")).sendKeys("Alaska Cruises");
-        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
-         
-        //input Alaska Cruises in to search
-        String searchStr = "Alaska Cruises";
-        driver.findElement(By.xpath("//*[@id=\"search_destinations_chosen\"]/div/ul/li")).click();;
- 
+
+		HoverToElement(driver,exploremenu);
+		HoverToElement(driver,driver.findElement(By.xpath(xpathExpression)));
+
+		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+		driver.findElement(By.xpath("//*[@id=\"search_destinations_chosen\"]")).click();
+
+		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+
+		driver.findElement(By.xpath("//*[@id=\"search_destinations_chosen\"]/div/div/input")).sendKeys("Alaska Cruises");
+		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+
+		//input Alaska Cruises in to search
+		String searchStr = "Alaska Cruises";
+		driver.findElement(By.xpath("//*[@id=\"search_destinations_chosen\"]/div/ul/li")).click();;
+
 	}
-	
+
 	private static void HoverAndClick(WebDriver driver, WebElement exploremenu, WebElement shoremenu) {
 		// TODO Auto-generated method stub
 		Actions actions = new Actions(driver);
